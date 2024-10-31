@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spooky Halloween</title>
+
+ <style>
+    body {
+    font-family: 'Times New Roman', serif;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    }
+
+    header {
+    background-color: #44355b;
+    padding: 20px;
+    }
+
+    .spooky-image img {
+    width: 15%;
+    height:auto;
+    border: 5px solid #ee5622;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(138, 137, 137);
+    margin-top:20px;
+    }
+
+    .spooky-message p {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    }
+
+    footer {
+    background-color: #97948c;
+    color:#ab350a;
+    font-weight: bold;
+    font-size:1.5em;
+    padding: 10px;
+    }
+
+    input[type="text"], button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    }
+
+    button {
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    }
+ </style>
+</head>
+<body>
+  <header>
+    <h1>Boo! A Spooky Halloween</h1>
+  </header>
+  <main>
+  
+    <section class="spooky-message">
+      <p>Happy Halloween! Beware of spooky surprises.</p>
+      <p>Are you too old to trick or treat?</p>
+      <input type="text" id="ageInput" placeholder="Enter your age">
+      <input type="text" id="costumeInput" placeholder="Enter your costume">
+      <button id="checkButton">Check</button>
+
+     <p id="result"></p>
+
+     <button id="playMusic">Play Spooky Sounds</button>
+     <button id="stopMusic">Stop Spooky Sounds</button>
+    <!-- <button id="playStopMusic">Spooky Sounds</button>-->
+
+    </section>
+      <section class="spooky-image">
+      <img src="skull.jpg" alt="Spooky Image">
+
+    </section>
+
+  </main>
+  <footer>
+    <p>&copy; 2024 Spooky Website</p>
+  </footer>
+<script src="HalloweenElseIf.js"></script>
+</body>
+</html>
