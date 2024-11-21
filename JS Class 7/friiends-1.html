@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button click handler</title>
+  </head>
+  <body>
+    <h1>Ring the Doorbell</h1>
+    <p id="main-text" class="orange" style="font-weight: bold">
+      a bunch of really valuable text...
+    </p>
+    <button id="cool-button">Something Cool</button>
+    <button id="not-button">Something Not Cool</button>
+    <script>
+      function coolButton() {
+        document.getElementById("main-text").textContent = `${coolInput}`;
+      }
+      function notCool() {
+        document.getElementById("main-text").textContent = `${notCoolInput}`;
+      }
+
+      let coolInput = prompt("Enter something cool");
+      let notCoolInput = prompt("Enter something not cool");
+      // Obtain a reference to the button element
+
+      let cool_button = document.getElementById("cool-button");
+      // Set named function youRang as the click event handler
+      cool_button.addEventListener("click", coolButton);
+
+      let not_button = document.getElementById("not-button");
+      not_button.addEventListener("click", notCool);
+    </script>
+  </body>
+</html>

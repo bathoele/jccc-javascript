@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <ul id="shoppingList"></ul>
+      <input type="text" id="newItem" placeholder="Enter item name" />
+      <button id="addItemButton">Add Item</button>
+    </div>
+
+    <script>
+      // Reference the html elements and put them in a variable
+      const newItemInput = document.getElementById("newItem");
+      const addItemButton = document.getElementById("addItemButton");
+      const shoppingList = document.getElementById("shoppingList");
+
+      // Add action to the button - a click event
+      addItemButton.addEventListener("click", function () {
+        const newItem = newItemInput.value.trim();
+
+        //error checking.. Check if the box is empty
+        if (newItem === "") {
+          alert("Please enter an item name.");
+          return;
+        }
+        // Create a li html element and add the text to it
+        const listItem = document.createElement("li");
+        listItem.textContent = newItem;
+
+        // Create a delete button and add text to it
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+
+        // Add a click event listener to the button
+        // and remove the item from the list
+        deleteButton.addEventListener("click", function () {
+          shoppingList.removeChild(listItem);
+        });
+
+        //Add the delete button the list and the list item to the
+        //big list and clear out the box.
+        listItem.appendChild(deleteButton);
+        shoppingList.appendChild(listItem);
+        newItemInput.value = "";
+        newItemInput.focus();
+      });
+    </script>
+  </body>
+</html>
