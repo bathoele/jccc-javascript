@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- Brendan Thoele, 11.23.2024 -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JS Week 7 Project</title>
+        <style>
+
+            header {
+                color: whitesmoke;
+                margin-top: 3em;
+            }
+
+            h1 {
+                text-align: center;
+                text-shadow: 2px 2px 0px black;
+            }
+
+            body {
+                background-color: dimgray;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            
+            main {
+                padding-top: 1em;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 37em;
+                width: 75%;
+                padding: 1em;
+                background-color: whitesmoke;
+            }
+
+            .wrap {
+                margin-bottom: 4em;
+            }
+
+            .dot {
+                width: 30px;
+                height: 3px;
+                background-color: dimgray;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 1em;
+            }
+
+            .question {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-top: .7em;
+                margin-bottom: 0em;
+            }
+
+            .answer {
+                margin-top: .7em;
+                padding: .3em;
+                font-size: 1em;
+                color: whitesmoke;
+                background-color: black;
+            }
+
+            .code {
+                color: gold;
+                display: inline-block;
+                margin-left: 1.2em;
+            }
+
+            #input-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            #taskList {
+                padding: 0px;
+            }
+
+            #taskList li {
+                display: flex;
+                justify-content: space-between;
+                margin-top: .7em;
+                padding: .3em;
+                font-size: 1em;
+                color: whitesmoke;
+                background-color: black;
+                width: 95%;
+                max-width: 27em;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            li button {
+                background-color: whitesmoke;
+                color: darkred;
+                border: none;
+            }
+
+            #taskInput {
+                margin-right: 10px;
+                width: 60%;
+                max-width: 14em;
+                border: solid black 1px;
+                padding: 5px;
+            }
+
+            #addTaskBtn {
+                border: none;
+                color: whitesmoke;
+                background-color: dimgray;
+                border-radius: 7px;
+                padding-left: 5px;
+                padding-right: 5px;
+                height: 2em;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Week 7 Project</h1>
+        </header>
+        <main>
+            <div class="wrap">
+                <div class="dot"></div>
+                <p class="question">Why is the JavaScript textContent property safer than innerHTML?</p>
+                <p class="answer">TextContent only changes the text, whereas innerHTML inserts HTML content. InnerHTML is less secure because a bad actor has more power to insert their own malicious code.</p>
+                <br>
+                <div class="dot"></div>
+                <p class="question">Explain the relationship between an HTML attribute and a corresponding DOM property (explain the connection to JavaScript).  Use a specific example in your answer</p>
+                <p class="answer">If you want to access an individual HTML element and change it's text content, you would first access the element by naming its id with the getElementById method. If you tag this method after the "document" keyword it means that you are getting the element from the related HTML file:<br><br><span class="code">document.getElementById("elementId")</span><br><br>then you would assign it a new string with the textContent property:<br><br><span class="code">.textContent = "New text.";</span><br><br>The whole line of code would look like this:<br><br><span class="code">document.getElementById("elementId").textContent = "New text.";</span>
+                </p>
+            </div>
+            <div class="dot"></div>
+            <h1 style="color: white; text-shadow: 3px 3px black;">To-Do List</h1>
+            <div id="input-container">
+                <input type="text" id="taskInput">
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+            <ul id="taskList"></ul>
+        </main>
+        <script src="todo.js"></script>
+    </body>
+</html>
