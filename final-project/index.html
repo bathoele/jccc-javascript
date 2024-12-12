@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WEB 114 Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>EXPLODER DECODER</h1>
+      <h3>Instructions</h3>
+      <p>There is a bomb. You must defuse it by guessing the correct bomb code before the time runs out. This would be nearly impossible without the DECODER (the little green thing to the right of the bomb). Every time an incorrect code is entered, the decoder will assess each digit that you guessed and display the "direction" of the correct digit. For example, if the correct code is <span class="red">5555</span> and you entered <span class="red">7935</span>, the decoder will display <span class="green">vv^-</span>. "<span class="green">v</span>" means that the correct digit is lower than your guess, "<span class="green">^</span>" means that it is higher, and "<span class="green">-</span>" means that your guess was correct. Good luck!</p>
+      <h3>Difficulty Settings</h3>
+      <div id="difficulty-container">
+        <input type="radio" id="novice" name="diffi" value="71" checked>
+        <label for="never"><span class="name">NOVICE</span><br>1 minute and 10 seconds left!</label>
+        <input type="radio" id="experienced" name="diffi" value="36">
+        <label for="a-few"><span class="name">MEDIUM</span><br>35 seconds left!!</label>
+        <input type="radio" id="expert" name="diffi" value="21">
+        <label for="occasion"><span class="name">EXPERT</span><br>20 seconds left!!!</label>
+        <input type="radio" id="lucky" name="diffi" value="13">
+        <label for="every-day"><span class="name">DECODERATOR</span><br>12 seconds left...</label>
+      </div>
+    </header>
+    <main id="wrapper">
+      <button id="start-btn">START</button>
+      <div id="explosion"></div>
+      <div id="bomb">
+        <div id="timer-container">
+          <div id="timer"></div>
+        </div>
+        <div id="input-display"></div>
+        <div id="num-pad">
+          <button class="num-key" value="7">7</button>
+          <button class="num-key" value="8">8</button>
+          <button class="num-key" value="9">9</button>
+          <button class="num-key" value="4">4</button>
+          <button class="num-key" value="5">5</button>
+          <button class="num-key" value="6">6</button>
+          <button class="num-key" value="1">1</button>
+          <button class="num-key" value="2">2</button>
+          <button class="num-key" value="3">3</button>
+          <button id="clear-btn">CLEAR</button>
+          <button class="num-key" value="0">0</button>
+          <button id="enter-btn">ENTER</button>
+        </div>
+      </div>
+      <div id="line"></div>
+      <div id="decoder-container">
+        <div id="decoder"></div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

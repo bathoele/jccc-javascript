@@ -1,0 +1,209 @@
+body {
+  background-color: #301b06;
+  background-image: url(./images/table.jpg);
+  background-size: 100vw;
+  background-blend-mode: darken;
+  font-family: 'Courier New', Courier, monospace;
+  padding-bottom: 5em;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1em;
+  color: white;
+  margin-top: 2.5em;
+}
+
+h1 {
+  text-shadow: #200 5px 15px 2px;
+}
+
+header h3 {
+  margin-bottom: 0;
+}
+
+header p {
+  width: 45em;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: .5em;
+  margin-bottom: 2.5em;
+  line-height: 1.2em;
+}
+
+.green {
+  color: #2f2;
+}
+
+.red {
+  color: #f22;
+}
+
+#difficulty-container {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+#difficulty-container label {
+  width: 8em;
+  margin-right: 1em;
+}
+
+#difficulty-container input {
+  margin-bottom: 4.1em;
+  margin-right: .8em;
+}
+
+#difficulty-container label:last-of-type {
+  margin-right: 0;
+}
+
+.name {
+  color: #f22;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+
+#wrapper {
+  display: flex;
+  padding-left: 25%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#start-btn {
+  height: 3em;
+  width: 9em;
+  position: absolute;
+  /* I could try removing the absolute */
+  margin-left: 11em;
+  margin-top: 12em;
+  z-index: 2;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #bfbfbf;
+  border: solid black;
+  border-radius: 1em;
+}
+
+#start-btn:hover {
+  background-color: #888;
+}
+
+#explosion {
+  background-image: url(./images/exp.png);
+  background-size: 30em;
+  background-repeat: no-repeat;
+  height: 30em;
+  width: 30em;
+  display: none;
+  position: absolute;
+  margin-left: .5em;
+  z-index: 1;
+}
+
+#bomb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid .5em;
+  border-radius: .3em;
+  width: 30em;
+  background-color: #bfbfbf;
+  background-image: url(./images/metallic.jpg);
+  background-size: 55em;
+  background-position: 15em -8em;
+  background-blend-mode: color-burn;
+}
+
+#line {
+  width: 3em;
+  margin-top: 1em;
+  background-image: url(./images/wire.png);
+  background-size: 12em;
+  background-repeat: no-repeat;
+}
+
+#decoder-container {
+  width: 11em;
+  height: 7em;
+  margin-top: 3em;
+  border: solid;
+  border-radius: 1em;
+  background-color: #333;
+  background-image: url(./images/board.png);
+  background-size: 30em;
+  background-position: 18em;
+}
+
+#decoder {
+  width: 3.5em;
+  height: 1.6em;
+  border: solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  text-align: center;
+  padding-top: .3em;
+  font-size: 1.8em;
+  letter-spacing: .2em;
+  background-color: #020;
+  color: #efe;
+  text-shadow: 0 0 .5em #2f2, 0 0 .5em #2f2;
+}
+
+#timer-container {
+  border: solid black 10px;
+  width: 12em;
+  height: 3.5em;
+  padding-top: .25em;
+  background-color: #200;
+}
+
+#timer {
+  font-size: 3em;
+  text-align: center;
+  color: #fee;
+  text-shadow: 0 0 .5em #f22, 0 0 .5em #f22;
+}
+
+#input-display {
+  width: 4em;
+  height: 1.3em;
+  padding-top: .2em;
+  border: solid black 3px;
+  font-size: 2em;
+  text-align: center;
+  background-color: #004;
+  color: #eef;
+  text-shadow: 0 0 .6em #22f, 0 0 .6em #22f;
+}
+
+#num-pad {
+  width: 12em;
+  border: solid 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  padding: .7em;
+  height: 13em;
+  gap: .3em;
+  background-color: #333;
+}
+
+#num-pad button {
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  box-shadow: -3px 3px #222;
+}
+
+.num-key {
+  font-size: 1.7em;
+}
